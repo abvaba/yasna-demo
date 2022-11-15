@@ -2,10 +2,10 @@
 
 </script>
 
-<template>
+<template lang="pug">
 
 </template>
 
-<style scoped>
+<style scoped lang="sass">
 
 </style>
