@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from "node:url";
-import vuePugPlugin from 'vue-pug-plugin';
+// @ts-ignore
+import vuePugPlugin from "vue-pug-plugin";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
