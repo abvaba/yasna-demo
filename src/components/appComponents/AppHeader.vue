@@ -1,6 +1,6 @@
 <template>
-  <router-link to="/">Go to Home</router-link>
-  <router-link to="/about">Go to About</router-link>
+  <router-link active-class="active" to="/">Go to Home</router-link>
+  <router-link active-class="active" to="/about">Go to About</router-link>
 </template>
 
 <script>
@@ -9,6 +9,7 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style scoped lang="sass">
+.active
+  color: #ed2
 </style>

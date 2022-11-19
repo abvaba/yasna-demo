@@ -1,6 +1,15 @@
 import { createApp } from "vue";
+import App from "@/App.vue";
+import axios from "axios";
 
-const app = createApp({})
-app.config.globalProperties.apiRoot = () => {
-  return 'http://'
+const app = createApp(App);
+
+app.config.globalProperties.GLOBALS = {
+  authApi : axios.create({
+    baseURL: import.meta.env.VITE_API_BASE_URL,
+    withCredentials: false,
+  })
 }
+
+
+export {app};
