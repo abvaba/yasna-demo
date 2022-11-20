@@ -1,3 +1,5 @@
+import type { AxiosResponse } from "axios";
+
 export default({
   methods: {
     async loginUser(user: any) {
@@ -17,6 +19,11 @@ export default({
             this.$router.push({ path : '/' });
           }
         });
+    },
+    async updateUser(user: object): Promise<object> {
+      let response: AxiosResponse<any>;
+      response = await this.GLOBALS.authApi.put("user", user);
+      return response;
     }
   }
 })

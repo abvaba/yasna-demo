@@ -1,10 +1,11 @@
 <template lang="pug">
-Login
+Settings
 </template>
 
 <script setup>
-import Login from '@/components/appComponents/Login.vue'
+import Settings from '@/components/appComponents/Settings.vue';
 </script>
 
 <style scoped>
+
 </style>

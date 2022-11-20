@@ -15,6 +15,7 @@
     "pinia": "^2.0.24",
     "sass": "^1.56.1",
     "vue": "^3.2.41",
+    "vue-material-design-icons": "^5.1.2",
     "vue-query": "^1.26.0",
     "vue-router": "^4.1.5",
     "vuejs-jwt": "^1.1.0"

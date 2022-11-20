@@ -1,6 +1,5 @@
 <template lang="pug">
 Register
-<!--   <router-link class="-slide-fade" to="/sign-in">sign in</router-link>-->
 </template>
 
 <script setup>

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
-import AboutView from "@/views/UserView.vue";
+import SettingsView from "@/views/SettingsView.vue";
 import SignInView from "@/views/SignInView.vue";
 import SignUpView from "@/views/SignUpView.vue";
 import UserView from '@/views/UserView.vue';
@@ -34,6 +34,12 @@ const routers = createRouter({
       path: "/user/:username",
       name: "user",
       component: UserView,
+      beforeEnter: [confirmUser],
+    },
+    {
+      path: "/settings",
+      name: "settings",
+      component: SettingsView,
       beforeEnter: [confirmUser],
     }
   ],
