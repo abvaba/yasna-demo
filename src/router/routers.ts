@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
-import AboutView from "@/views/AboutView.vue";
-import LoginView from '@/views/LoginView.vue';
-import authMixin from "@/mixins/authMixin";
-function rmQ() {
+import AboutView from "@/views/UserView.vue";
+import SignInView from "@/views/SignInView.vue";
+import SignUpView from "@/views/SignUpView.vue";
+import UserView from '@/views/UserView.vue';
+
+function confirmUser() {
   if(!localStorage.getItem('jwt')) {
     return {
-      path: './login'
+      path: './sign-in'
     }
   }
 }
@@ -19,15 +21,20 @@ const routers = createRouter({
       component: HomeView,
     },
     {
-      path: "/login",
-      name: "login",
-      component: LoginView
+      path: "/sign-in",
+      name: "signIn",
+      component: SignInView,
     },
     {
-      path: "/about",
-      name: "about",
-      component: AboutView,
-      beforeEnter: [rmQ],
+      path: "/sign-up",
+      name: "signUp",
+      component: SignUpView,
+    },
+    {
+      path: "/user/:username",
+      name: "user",
+      component: UserView,
+      beforeEnter: [confirmUser],
     }
   ],
 });

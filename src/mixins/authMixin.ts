@@ -1,11 +1,22 @@
-import axios from "axios";
-import type { NavigationGuardNext } from 'vue-router';
-
 export default({
   methods: {
     async loginUser(user: any) {
-      const response = await this.GLOBALS.authApi.post('users/login', user);
-      localStorage.setItem('jwt', response.data.user.token);
+      await this.GLOBALS.authApi.post('users/login', user)
+        .then(res => {
+          if(res.status === 200) {
+            localStorage.setItem('jwt', res.data.user.token);
+            this.$router.push({ path : '/' });
+          }
+        });
     },
+    async signUpUser(user: any) {
+      await this.GLOBALS.authApi.post('users', user)
+        .then(res => {
+          if(res.status === 200) {
+            localStorage.setItem('jwt', res.data.user.token);
+            this.$router.push({ path : '/' });
+          }
+        });
+    }
   }
 })

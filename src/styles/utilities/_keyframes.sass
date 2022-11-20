@@ -1,0 +1,11 @@
+=slideFade($distance)
+  0%
+    transform: translateX(#{$distance + 'rem'})
+    opacity: 0
+  100%
+    transform: translateX(0)
+    opacity: 1
+@keyframes slide-fade
+  +slideFade(1)
+@keyframes -slide-fade
+  +slideFade(-1)

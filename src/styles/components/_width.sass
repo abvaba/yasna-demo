@@ -1,0 +1,7 @@
+@use "sass:math"
+@for $i from 1 through 12
+  $division: math.div(1, $i)
+  .w-1\/#{$i}
+    width: #{($division * 100) + '%'}
+.w-full
+  width: 100%
