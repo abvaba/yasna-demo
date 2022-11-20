@@ -4,6 +4,7 @@ import SettingsView from "@/views/SettingsView.vue";
 import SignInView from "@/views/SignInView.vue";
 import SignUpView from "@/views/SignUpView.vue";
 import UserView from '@/views/UserView.vue';
+import EditorView from '@/views/EditorView.vue';
 
 function confirmUser() {
   if(!localStorage.getItem('jwt')) {
@@ -40,6 +41,12 @@ const routers = createRouter({
       path: "/settings",
       name: "settings",
       component: SettingsView,
+      beforeEnter: [confirmUser],
+    },
+    {
+      path: "/editor",
+      name: "editor",
+      component: EditorView,
       beforeEnter: [confirmUser],
     }
   ],

@@ -1,7 +1,7 @@
 <template lang="pug">
 .body-bg-2.bg-grey-800
   .w-full.h-full.center.z-1
-    div(class="form-container w-1/4 slide-fade")
+    div(class="form-container md:w-1/2 lg:w-1/4 slide-fade")
       Logo
       h2 Sign in to your account
       SignInForm

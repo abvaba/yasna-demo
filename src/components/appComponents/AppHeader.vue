@@ -18,4 +18,5 @@ import navigation from "@/components/appComponents/header/Navigation.vue";
   border-radius: 0.75rem
   box-shadow: 0 1px 2px 0 transparentize($black, 0.8)
   @extend %row_between
+  flex-wrap: wrap
 </style>

@@ -20,12 +20,15 @@ export default {
 
 <style scoped lang="sass">
 @import "../../styles/components/flex"
+@import "../../styles/mixin/mixins"
 .logOutBtn
   position: fixed
   inset-inline-start: -0.5rem
-  inset-block-start: 50%
+  inset-block-start: 95%
   transform: translateY(-50%)
   @extend %row_center
+  +mq(l)
+    inset-block-start: 50%
   gap: 0.2rem
   svg
     transform: scale(0.8)

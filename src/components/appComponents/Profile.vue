@@ -5,7 +5,7 @@ main
   .profile-avatar
     img(:src="profile.image")
     h4 {{profile.username}}
-    router-link(to="/settings") settings
+    router-link(to="/settings" class="w-full md:w-auto") settings
 </template>
 
 <script>
@@ -31,6 +31,7 @@ export default {
 <style scoped lang="sass">
 @import "../../styles/variables/colors"
 @import "../../styles/components/flex"
+@import "../../styles/mixin/mixins"
 main
   margin-block: 2rem
 .profile-header
@@ -40,9 +41,12 @@ main
     margin-block-end: .5rem
 .profile-avatar
   $x: 128px
-  padding: 2rem
+  padding: 2rem 0
   @extend %row_start_start
+  flex-wrap: wrap
   gap: 1.5rem
+  +mq(l)
+    padding: 2rem
   h4
     font-size: clamp(1.25rem, 1.25rem, 2rem)
     font-weight: 600

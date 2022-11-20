@@ -1,6 +1,6 @@
 <template lang="pug">
 .w-full.h-full.center
-  div(class="form-container w-1/4 mt-8")
+  div(class="form-container w-full md:w-1/2 lg:w-1/4 mt-8")
     h2 Your Settings
     SettingsForm
 LogOutBtn
